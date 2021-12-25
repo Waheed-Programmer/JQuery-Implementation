@@ -11,7 +11,7 @@
 <body>
     <div class="container">
         <br>
-        <h1>Show alert</h1>
+        <h1>Input slectorf form in Jquery</h1>
         <form action="/action_page.php">
             <div class="form-group">
               <label for="email">Email address:</label>
@@ -21,19 +21,29 @@
               <label for="pwd">Password:</label>
               <input type="password" class="form-control" id="pwd">
             </div>
-            <div class="checkbox">
-              <label><input type="checkbox"> Remember me</label>
+            <div class="form-group"><br>
+            <input type="radio" name="gender" checked="checked" value="male">Male
+            <input type="radio" name="gender"  value="Female">FeMale
             </div>
+            <div class="checkbox"><br>
+              <label><input type="checkbox" checked="checked"> JS</label>
+              <label><input type="checkbox"> Node JS</label>
+              <label><input type="checkbox"> C#</label>
+            </div><br>
+            <div class="form-group">
+            <select>
+                <option selected="selected" value="USA">USA</option>
+                <option value="Pakistan">Pakistan</option>
+                <option value="Dubai">Dubai</option>
+            </select>
+        </div><br>
             <button type="submit" class="btn btn-primary">Submit</button>
+
           </form>
       </div>  
 </body>
 </html>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>   
-        $(document).ready(function(){
-                $('#btn').click(function(){
-                    alert("This is jquery series");
-                })           
-        })
+       
 </script>
