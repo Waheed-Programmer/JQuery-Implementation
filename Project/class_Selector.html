@@ -11,44 +11,20 @@
 <body>
     <div class="container">
         <br>
-        <h4>Implement of element selector</h4><br>
-        <table class="table table-responsive table-border">
-
-            <th>Column1</th>
-            <th>Column2</th>
-            <th>Column3</th>
-
-            <tr>
-            <td>Asp.Net</td>
-            <td>Java</td>
-            <td>JS</td>
-        </tr>
-        <tr>
-            <td>C</td>
-            <td>Java</td>
-            <td>C#</td>
-        </tr>
-        <tr>
-            <td>OOP</td>
-            <td>C++</td>
-            <td>JS</td>
-        </tr>
-        </table>
+        <h1>Class Selector in jquery</h1>
+        <span class="small">Span 1</span><br>
+        <span class="small">Div 1</span><br>
+        <span class="big">span 2</span><br>
+        <p class="big">This is paragraph</p>
         <button class="btn btn-primary mt-4" id="btn">Click Me</button>
       </div>  
 </body>
 </html>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>   
-       $(document).ready(function(){
-        // alert($('table').html());
-        // $('td').css('background','yellow');
-        // $('table tr').each(function(){
-        //     alert($(this).html());
-        // })
-
-        $('tr:even').css('background','yellow')
-        $('tr:odd').css('background','grey')
-
-       });
+        $(document).ready(function(){
+                $('#btn').click(function(){
+                    alert("This is jquery series");
+                })           
+        })
 </script>
