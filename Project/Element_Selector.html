@@ -11,8 +11,14 @@
 <body>
     <div class="container">
         <br>
-        <h4>Implement of element selector</h4>
+        <h4>Implement of element selector</h4><br>
         <table class="table table-responsive table-border">
+
+            <th>Column1</th>
+            <th>Column2</th>
+
+            <th>Column3</th>
+
             <tr>
             <td>Asp.Net</td>
             <td>Java</td>
@@ -38,8 +44,12 @@
        $(document).ready(function(){
         // alert($('table').html());
         // $('td').css('background','yellow');
-        $('table tr').each(function(){
-            alert($(this).html());
-        })
+        // $('table tr').each(function(){
+        //     alert($(this).html());
+        // })
+
+        $('tr:even').css('background','yellow')
+        $('tr:odd').css('background','grey')
+
        });
 </script>
