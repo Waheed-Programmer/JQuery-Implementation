@@ -12,11 +12,27 @@
     <div class="container">
         <br>
         <h1>Checked selector in jquery</h1>
-        <button class="btn btn-primary mt-4" id="btn">Click Me</button>
+        <div class="form-group"><br>
+            <input type="radio" name="gender"  value="Male">Male
+            <input type="radio" name="gender"  value="Female">FeMale
+            </div><br>
+        <label id="textshow"></label><br>
+
+        <button class="btn btn-primary mt-4" id="Save" type="submit">Submit Now</button><br>
       </div>  
 </body>
 </html>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>   
-      
+      $(document).ready(function(){
+        $('#Save').click(function(){
+            var result = $('input[type="radio"]:checked')
+            if(result.length > 0){
+                $('#textshow').html(result.value()+"is checked")
+            }else{
+                $('#textshow').html("Radio button is not checked")
+
+            }
+        })
+      })
 </script>
