@@ -15,20 +15,20 @@
         <form action="/action_page.php">
             <div class="form-group">
               <label for="email">Email address:</label>
-              <input type="email" class="form-control" id="email">
+              <input type="email" class="form-control" id="email" value="Email">
             </div>
             <div class="form-group">
               <label for="pwd">Password:</label>
-              <input type="password" class="form-control" id="pwd">
+              <input type="password" class="form-control" id="pwd" value = "Password">
             </div>
             <div class="form-group"><br>
-            <input type="radio" name="gender" checked="checked" value="male">Male
+            <input type="radio" name="gender" checked="checked" value="Male">Male
             <input type="radio" name="gender"  value="Female">FeMale
             </div>
             <div class="checkbox"><br>
-              <label><input type="checkbox" checked="checked"> JS</label>
-              <label><input type="checkbox"> Node JS</label>
-              <label><input type="checkbox"> C#</label>
+              <label><input type="checkbox" checked="checked" value="JS"> JS</label>
+              <label><input type="checkbox" value="Node JS"> Node JS</label>
+              <label><input type="checkbox" value="C#"> C#</label>
             </div><br>
             <div class="form-group">
             <select>
@@ -50,5 +50,9 @@
 </html>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>   
-       
+       $(document).ready(function(){
+           $('input').each(function(){
+               alert($(this).val());
+           })
+       })
 </script>
