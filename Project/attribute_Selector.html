@@ -11,20 +11,31 @@
 <body>
     <div class="container">
         <br>
-        <h1>Class Selector in jquery</h1>
-        <span class="small">Span 1</span><br>
-        <span class="small">Div 1</span><br>
-        <span class="big">span 2</span><br>
-        <p class="big">This is paragraph</p>
+        <h1>Attribute selectors</h1>
+        <div title ="t1">
+            Div 1
+        </div>
+        <div title = "t2">
+            Div 2
+
+        </div>
+        <div title ="t3">
+            Div 3
+
+        </div>
+        <span title="s1">
+            span 1
+        </span><br><br>
+        <span>
+            span 2
+        </span><br>
         <button class="btn btn-primary mt-4" id="btn">Click Me</button>
       </div>  
 </body>
 </html>
-
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>   
        $(document).ready(function(){
-           $('.small,span.big').css('border','1px solid black');
+           $('[title]').css('border', '2px solid blue');
        })
 </script>
