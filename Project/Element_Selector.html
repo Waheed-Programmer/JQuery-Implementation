@@ -11,7 +11,8 @@
 <body>
     <div class="container">
         <br>
-        <table border="1">
+        <h4>Implement of element selector</h4>
+        <table class="table table-responsive table-border">
             <tr>
             <td>Asp.Net</td>
             <td>Java</td>
@@ -36,6 +37,9 @@
 <script>   
        $(document).ready(function(){
         // alert($('table').html());
-        $('td').css('background','yellow');
+        // $('td').css('background','yellow');
+        $('table tr').each(function(){
+            alert($(this).html());
+        })
        });
 </script>
