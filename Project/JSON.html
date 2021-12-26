@@ -21,18 +21,18 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>   
        $(document).ready(function(){
-        //    var obj ={
-        //        "FirstName": "Waheed",
-        //        "LastName": "Arshad",
-        //        "Gender": "Male",
-        //        "Salary": 50000
-        //    };
-        //    var result =""
-        //    result+="First name = "+obj.FirstName+"<br>"
-        //    result+="Last name = "+obj.LastName+"<br>"
-        //    result+="Gender = "+obj.Gender+"<br>"
-        //    result+="Salary = "+obj.Salary+"<br>"
-        //    $('#divi').html(result);
+           var obj ={
+               "FirstName": "Waheed",
+               "LastName": "Arshad",
+               "Gender": "Male",
+               "Salary": 50000
+           };
+           var result =""
+           result+="First name = "+obj.FirstName+"<br>"
+           result+="Last name = "+obj.LastName+"<br>"
+           result+="Gender = "+obj.Gender+"<br>"
+           result+="Salary = "+obj.Salary+"<br>"
+           $('#divi').html(result);
         var obj =[{
                "FirstName": "Waheed",
                "LastName": "Arshad",
@@ -45,5 +45,25 @@
                "Salary": 40000
            }];
            $('#divi').html(obj[0].FirstName);
-       })
+
+           var jobj={
+            "First":{
+                "FirstName": "Waheed",
+               "LastName": "Arshad",
+               "Gender": "Male",
+               "Salary": 50000
+            },
+            "Second":{
+                "FirstName": "Akmal",
+               "LastName": "Khan",
+               "Gender": "Male",
+               "Salary": 40000
+            }
+
+           }
+           $('#divi').html(jobj.Second.FirstName);
+
+        }
+
+       )
 </script>
