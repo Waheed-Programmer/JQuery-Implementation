@@ -20,5 +20,18 @@
 </html>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>   
-       
+       $(document).ready(function(){
+           var obj ={
+               "FirstName": "Waheed",
+               "LastName": "Arshad",
+               "Gender": "Male",
+               "Salary": 50000
+           };
+           var result =""
+           result+="First name = "+obj.FirstName+"<br>"
+           result+="Last name = "+obj.LastName+"<br>"
+           result+="Gender = "+obj.Gender+"<br>"
+           result+="Salary = "+obj.Salary+"<br>"
+           $('#divi').html(result);
+       })
 </script>
