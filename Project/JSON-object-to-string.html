@@ -21,19 +21,44 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>   
        $(document).ready(function(){
-           
-        var obj =[{
-               "FirstName": "Waheed",
-               "LastName": "Arshad",
-               "Gender": "Male",
-               "Salary": 50000
-           },
-           {
-           "FirstName": "Akmal",
-               "LastName": "Khan",
-               "Gender": "Male",
-               "Salary": 40000
-           }];         
-          
+
+
+     //convert to json string in json array 
+
+        var jsonobj ='[{"FirstName":"Waheed","LastName":"Arshad","Gender":"Male","Salary":50000},{"FirstName":"Akmal","LastName":"Khan","Gender":"Male","Salary":40000}]';
+        
+        var result = JSON.parse(jsonobj);
+        
+        var load = '';
+        $.each(result, function(i,item){
+            load+= "First Name ="+item.FirstName+ "<br>"
+            load+= "last Name ="+item.LastName+ "<br>"
+            load+= "Gender ="+item.Gender+ "<br>"
+            load+= "Salary ="+item.Salary+ "<br><br>"
+
+        });
+
+
+
+        $('#divi').html(load);
+
+
+
+        //convert objects to string data 
+
+        // var obj =[{
+        //        "FirstName": "Waheed",
+        //        "LastName": "Arshad",
+        //        "Gender": "Male",
+        //        "Salary": 50000
+        //    },
+        //    {
+        //    "FirstName": "Akmal",
+        //        "LastName": "Khan",
+        //        "Gender": "Male",
+        //        "Salary": 40000
+        //    }];         
+        //   var result =JSON.stringify(obj);
+        //   $('#divi').html(result);
         })
 </script>
