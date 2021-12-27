@@ -11,7 +11,12 @@
 <body>
     <div class="container">
         <br>
-        <h1>Show alert</h1>
+        <h1>jQuery map method</h1><br>
+        <ul>
+            <li>Js</li>
+            <li>Java</li>
+            <li>Node Js</li>
+        </ul>
         <button class="btn btn-primary mt-4" id="btn">Click Me</button>
       </div>  
 </body>
@@ -19,8 +24,9 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>   
         $(document).ready(function(){
-                $('#btn').click(function(){
-                    alert("This is jquery series");
-                })           
+               alert($('li').map(function(index, element){
+                  return $(element).text();
+               }).get()); 
+                       
         })
 </script>
