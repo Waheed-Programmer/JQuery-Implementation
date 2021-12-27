@@ -24,39 +24,39 @@
         <br>
         <h4>Add or remove class in Jquery</h4><br>
         <table class="table table-responsive table-border">           
-
+            <p>This is demo here</p>
             <tr>
             <td>
-                <input type="button" style="width: 250px;" value="Add Color class" >
+                <input id="btn1" type="button" style="width: 250px;" value="Add Color class" class="btn btn-primary mt-4" >
             </td>
             <td>
-                <input type="button" style="width: 250px;" value="Remove Color class">
+                <input id="btn2" type="button" style="width: 250px;" value="Remove Color class" class="btn btn-danger mt-4">
 
             </td>
            
         </tr>
         <tr>
             <td>
-                <input type="button" style="width: 250px;" value="Add Color and italic class" >
+                <input id="btn3" type="button" style="width: 250px;" value="Add Color and italic class" class="btn btn-primary mt-4">
             </td>
             <td>
-                <input type="button" style="width: 250px;" value="Remove Color /italic class">
+                <input id="btn4" type="button" style="width: 250px;" value="Remove Color /italic class" class="btn btn-danger mt-4">
 
             </td>
             
         </tr>
         <tr>
             <td>
-                <input type="button" style="width: 250px;" value="Add Color italic class/Bold">
+                <input id="btn5" type="button" style="width: 250px;" value="Add Color italic class/Bold" class="btn btn-primary mt-4">
             </td>
             <td>
-                <input type="button" style="width: 250px;" value="Remove Color bold/ italic class">
+                <input id="btn6" type="button" style="width: 250px;" value="Remove Color bold/ italic class" class="btn btn-danger mt-4">
 
             </td>
            
         </tr>
         </table>
-        <button class="btn btn-primary mt-4" id="btn">Click Me</button>
+        <button class="btn btn-dark mt-4" id="btn">Click Me</button>
       </div>  
 </body>
 </html>
@@ -64,6 +64,11 @@
 <script>   
        $(document).ready(function(){
         
-
+        $('#btn1').click(function(){
+            $('p').addClass('addcolor');
+        })
+        $('#btn2').click(function(){
+            $('p').removeClass('addcolor');
+        })
        });
 </script>
