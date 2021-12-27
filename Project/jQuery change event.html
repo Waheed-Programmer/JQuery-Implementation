@@ -31,7 +31,7 @@
               <label><input type="checkbox" value="C#"> C#</label>
             </div><br>
             <div class="form-group">
-            <select>
+            <select id="selectId">
                 <option selected="selected" value="USA">USA</option>
                 <option value="Pakistan">Pakistan</option>
                 <option value="Dubai">Dubai</option>
@@ -45,12 +45,16 @@
             <button type="submit" class="btn btn-primary" value="submit">Submit</button>
 
           </form>
+          <div id="result"></div>
       </div>  
 </body>
 </html>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>   
        $(document).ready(function(){
-          
+        $('#selectId').change(function(){
+            var setvalue = $(this).value();
+            $('#result').html(setvalue);
+        })
        })
 </script>
