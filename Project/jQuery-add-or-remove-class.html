@@ -56,7 +56,7 @@
            
         </tr>
         </table>
-        <button class="btn btn-dark mt-4" id="btn">Click Me</button>
+        <button class="btn btn-dark mt-4" id="btnn">Click Me</button>
       </div>  
 </body>
 </html>
@@ -69,6 +69,27 @@
         })
         $('#btn2').click(function(){
             $('p').removeClass('addcolor');
+        })
+
+        $('#btn3').click(function(){
+            $('p').addClass('addfont');
+        })
+        $('#btn4').click(function(){
+            $('p').removeClass('addfont');
+        })
+
+        $('#btn5').click(function(){
+            $('p').addClass('addI');
+        })
+        $('#btn6').click(function(){
+            $('p').removeClass('addI');
+        })
+        $('#btnn').click(function(){
+            $('p').removeClass('addcolor');
+
+            $('p').removeClass('addfont');
+
+            $('p').removeClass('addI');
         })
        });
 </script>
