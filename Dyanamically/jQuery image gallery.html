@@ -20,14 +20,14 @@
         <br>
         <h1>Image gallary in Jquery</h1>
         <div>
-            <img src="/Images/(1).jpg" width="500px" height="400px" style="border: 1px solid blue;" alt=""><br>
+            <img src="/Images/(1).jpg" width="500px" height="400px" style="border: 1px solid blue;" id="idn"><br>
         </div>
         <div id="imagdiv">
             <img src="/Images/(2).png" class="imageclass">
+            <img src="/Images/(6).jpg" class="imageclass">
             <img src="/Images/(3).png" class="imageclass">
             <img src="/Images/(4).png" class="imageclass">
             <img src="/Images/(5).jpg" class="imageclass">
-
         </div>
         <button class="btn btn-primary mt-4" id="btnSave">Click Me</button>
       </div>  
@@ -36,7 +36,24 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>   
         $(document).ready(function(){
-
+            $('#imagdiv img').on({
+                mouseover: function(){
+                    $(this).css({
+                        'cursor': 'pointer',
+                        'border-color':'red'
+                    })
+                },
+                mouseout: function(){
+                    $(this).css({
+                        'cursor': 'Defualt',
+                        'border-color': 'grey'
+                    })
+                },
+                click: function(){
+                    var imageUrl = $(this).attr('src');
+                    $('#idn').attr('src',imageUrl);
+                }
+            })
            
         })
 </script>
