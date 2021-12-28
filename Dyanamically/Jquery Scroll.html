@@ -12,10 +12,14 @@
     <div class="container">
         <br>
         <h1>Add Dyanamically event handler in Jquery</h1>
-       <div style="width: 300px; height: 200px; overflow: scroll; border: 1px solid blueviolet;">
+       <div id="scrolll" style="width: 400px; height: 200px; overflow: scroll; border: 1px solid blueviolet;">
            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur veritatis doloremque magnam recusandae ea. Aliquam hic accusamus doloremque vero ullam culpa, corporis voluptate earum odit quisquam minus, voluptatem dolore corrupti.
            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, veniam cupiditate? Voluptates expedita maiores, reprehenderit unde accusamus totam illo, ad et nihil magnam doloremque perspiciatis mollitia voluptatem assumenda, incidunt inventore!
-       </div>
+           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur veritatis doloremque magnam recusandae ea. Aliquam hic accusamus doloremque vero ullam culpa, corporis voluptate earum odit quisquam minus, voluptatem dolore corrupti.
+           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, veniam cupiditate? Voluptates expedita maiores, reprehenderit unde accusamus totam illo, ad et nihil magnam doloremque perspiciatis mollitia voluptatem assumenda, incidunt inventore!Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur veritatis doloremque magnam recusandae ea. Aliquam hic accusamus doloremque vero ullam culpa, corporis voluptate earum odit quisquam minus, voluptatem dolore corrupti.
+           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, veniam cupiditate? Voluptates expedita maiores, reprehenderit unde accusamus totam illo, ad et nihil magnam doloremque perspiciatis mollitia voluptatem assumenda, incidunt inventore!
+       </div><br>
+       <h3>Total Scroll is <span>0</span></h3>
         <button class="btn btn-primary mt-4" id="btnSave">Click Me</button>
       </div>  
 </body>
@@ -23,7 +27,11 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>   
         $(document).ready(function(){
-
+            var counter = 0;
+            $('#scrolll').scroll(function(){
+                counter+=1;
+                $('span').text(counter);
+            })
                
         })
 </script>
