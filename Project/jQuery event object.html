@@ -13,7 +13,7 @@
         <br>
         <h1>jqueryevent object </h1>
         <div id="idt"></div>
-        <button class="btn btn-primary mt-4" id="btnS">Click Me</button>
+        <button class="btn btn-primary mt-4" type="submit" id="btnS">Click Me</button>
       </div>  
 </body>
 </html>
@@ -22,17 +22,17 @@
         $(document).ready(function(){
             
             $('#btnS').click(function(event){
-                detail(event)
-            }).mouseover(function(){
-                detail(event)
-            }).mouseout(function(){
                 detail(event);
-            })
+            }).mouseover(function(event){
+                detail(event);
+            }).mouseout(function(event){
+                detail(event);
+            });
 
             function detail(event){
                 var res = 'Detail =' +event.detail+ '</br>'+
-                          'X =' +event.pageX+ '</br>'+
-                          'Y =' +event.pageY+ '</br>'+
+                          'X =' +event.target.pageX+ '</br>'+
+                          'Y =' +event.target.pageY+ '</br>'+
                           'Target Element =' +event.target.type+ '</br>'+
                           'Target Element Tag Name =' +event.target.tagName+ 
                     $('#idt').html(res);
