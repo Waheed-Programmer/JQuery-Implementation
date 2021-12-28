@@ -51,7 +51,9 @@
                 },
                 click: function(){
                     var imageUrl = $(this).attr('src');
-                    $('#idn').attr('src',imageUrl);
+                    $('#idn').fadeOut(500,function(){
+                        $(this).attr('src',imageUrl);
+                    }).fadeIn(500);
                 }
             })
            
