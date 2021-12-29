@@ -38,6 +38,21 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>   
         $(document).ready(function(){
-           
+           var imageUrl = new Array();
+           var intervalId;
+           var btnStart = $('#btnE').val();
+           var btnStop = $('#btnS').val();
+           $('#imagdiv img').each(function(){
+               imageUrl.push($(this).attr('src'));
+
+           });
+           function setImage(){
+               var imageElement = $('#idn');
+               var currentImage = imageElement.attr('src');
+               var indexImage = $.inArray(currentImage,imageUrl);
+               if(indexImage== imageUrl.length-1){
+                   indexImage =-1
+               }
+           }
         })
 </script>
