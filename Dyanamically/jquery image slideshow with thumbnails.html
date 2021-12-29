@@ -19,8 +19,8 @@
     <div class="container">
         <br>
         <h1>Image gallary in Jquery</h1>
-        <button class="" id="btnE">Start Slide Show</button>
-    <button class="" id="btnS">Stop Slide Show</button><br><br>
+        <button class="" id="btnE" value="Start Slide Show">Start Slide Show</button>
+    <button class="" id="btnS" value="Stop Slide Show">Stop Slide Show</button><br><br>
         <div>
             <img src="/Images/(1).jpg" width="500px" height="400px" style="border: 1px solid blue;" id="idn"><br>
         </div>
@@ -40,8 +40,8 @@
         $(document).ready(function(){
            var imageUrl = new Array();
            var intervalId;
-           var btnStart = $('#btnE').val();
-           var btnStop = $('#btnS').val();
+           var btnStart = $('#btnE');
+           var btnStop = $('#btnS');
            $('#imagdiv img').each(function(){
                imageUrl.push($(this).attr('src'));
 
@@ -51,8 +51,15 @@
                var currentImage = imageElement.attr('src');
                var indexImage = $.inArray(currentImage,imageUrl);
                if(indexImage== imageUrl.length-1){
-                   indexImage =-1
+                   indexImage =-1; 
+                   imageElement.attr('src',imageUrl[indexImage+1]);
                }
            }
+
+           btnStart.click(function(){
+               intervalId = setInterval(setImage,500);
+               $(this).attr('disabled','disabled');
+               btnStop.removeAttr('disabled');
+           })
         })
 </script>
