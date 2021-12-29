@@ -50,7 +50,7 @@
                var imageElement = $('#idn');
                var currentImage = imageElement.attr('src');
                var indexImage = $.inArray(currentImage,imageUrl);
-               if(indexImage== imageUrl.length-1){
+               if(indexImage== (imageUrl.length-1)){
                    indexImage =-1; 
                    imageElement.attr('src',imageUrl[indexImage+1]);
                }
@@ -60,6 +60,10 @@
                intervalId = setInterval(setImage,500);
                $(this).attr('disabled','disabled');
                btnStop.removeAttr('disabled');
-           })
+           });
+           btnStop.click(function(){
+               clearInterval(intervalId);
+               btnStart.removeAttr('disabled');
+           }).attr('disabled','disabled');
         })
 </script>
