@@ -12,6 +12,7 @@
     <div class="container">
         <br>
         <h1>Jquery animate functions</h1>
+        <img src="/Images/(1).jpg" width="180px" height="200px" style="border: 1px solid blue;" id="idn"><br>
         <button class="btn btn-primary mt-4" id="btn">Click Me</button>
       </div>  
 </body>
@@ -23,6 +24,22 @@
                    $('h1').animate({
                        'font-size':80
                    },2000)
-                })           
+                }) 
+                
+                $('#idn').on({
+                    mouseover: function(){
+                        $(this).animate({
+                            'width':600,
+                            'height':300
+                        },3000)
+                    },
+                    mouseout: function(){
+                        $(this).animate({
+                            'width':180,
+                            'height':180
+                        },3000)
+                    }
+                    
+                })
         })
 </script>
