@@ -67,9 +67,18 @@
                 },
                 click: function(){
                     var imageUrl = $(this).attr('src');
+                    var effect = $('#selectImgEffect').val();
+                    var duration = $('#selectDuration').val()*1000;
+                    if(effect=='Fade'){
                     $('#idn').fadeOut(500,function(){
                         $(this).attr('src',imageUrl);
                     }).fadeIn(500);
+                }
+                else{
+                    $('#idn').slideUp(500,function(){
+                        $(this).attr('src',imageUrl);
+                    }).slideDown(500);
+                }
                 }
             }, 'img')
            
