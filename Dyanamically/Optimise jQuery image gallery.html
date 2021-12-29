@@ -18,8 +18,23 @@
     </style>
     <div class="container">
         <br>
+        <select name="" id="selectImgEffect">
+            <option value="fade">Fade</option>
+            <option value="slide">Slide</option>
+        </select>
+        <select name="" id="selectDuration">
+            <option value="0">0.5</option>
+            <option value="">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+    <button class="" id="btnE">Enlarge</button>
+    <button class="" id="btnS">Shrink</button>
+
         <h1>Image gallary in Jquery</h1>
         <div>
+            
             <img src="/Images/(1).jpg" width="500px" height="400px" style="border: 1px solid blue;" id="idn"><br>
         </div>
         <div id="imagdiv">
@@ -36,10 +51,26 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>   
         $(document).ready(function(){
-            $('#imagdiv img').on({
-               
+            $('#imagdiv').on({
+                mouseover: function(){
+                    $(this).css({
+                        'cursor': 'pointer',
+                        'border-color':'red'
+                    })
+                },
+                mouseout: function(){
+                    $(this).css({
+                        'cursor': 'Defualt',
+                        'border-color': 'grey'
+                    })
+                },
+                click: function(){
+                    var imageUrl = $(this).attr('src');
+                    $('#idn').fadeOut(500,function(){
+                        $(this).attr('src',imageUrl);
+                    }).fadeIn(500);
                 }
-            })
+            }, 'img')
            
         })
 </script>
