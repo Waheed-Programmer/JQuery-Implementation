@@ -81,6 +81,24 @@
                 }
                 }
             }, 'img')
-           
+           var imagS = $('#idn');
+           var height = parseInt(imagS.attr('height'));
+           var width = parseInt(imagS.attr('width'));
+           $('#btnE').click(function(){
+               width+=100;
+               height+=100;
+               imagS.animate({
+                   'height':height,
+                   'width':width
+               })
+           })
+           $('#btnS').click(function(){
+               width-=100;
+               height-=100;
+               imagS.animate({
+                   'height':height,
+                   'width':width
+               })
+           })
         })
 </script>
