@@ -35,18 +35,25 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>   
         $(document).ready(function(){
+
+            var pre = 0;
+            var current = 0;
+            
                 $('#btn').click(function(){
-                    prograssBar($('#idselect').val())
+                    pre = current;
+                    current = $('#idselect').val();
+                    prograssBar(pre,current);
+                    // prograssBar($('#idselect').val())
                 });  
                 
-                function prograssBar(treveal){
+                function prograssBar(pre,current){
                     $('#innerId').animate({
-                        'width':(500*treveal/100)
-                    },3000);
+                        'width':(500*current/100)
+                    },4000);
 
 
-                    $({counter:1}).animate({counter:treveal},{
-                    duration:3000,
+                    $({counter:pre}).animate({counter:current},{
+                    duration:2000,
                     step: function(){
                         $('#innerId').text(Math.ceil(this.counter)+'%');
                     }
