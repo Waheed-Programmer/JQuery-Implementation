@@ -25,7 +25,7 @@
             <option value="100">100</option>
         </select><br><br>
         <div id="outerid" style="background-color:#EEEE; height:30px; width:500px; padding:5px">
-            <div id="innerId" style="background-color:blue; height:19px; width:0px; padding:5px; color:white">
+            <div id="innerId" style="background-color:blue; height:19px; width:0px; padding:5px; color:white;text-align: center;">
             </div>
         </div>
         <button class="btn btn-primary mt-4" id="btn">Click Me</button>
@@ -37,6 +37,12 @@
         $(document).ready(function(){
                 $('#btn').click(function(){
                    
-                })           
+                })  
+                
+                function prograssBar(treveal){
+                    $('#innerId').animate({
+                        'width':treveal
+                    })
+                }
         })
 </script>
