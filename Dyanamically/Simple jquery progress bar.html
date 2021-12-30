@@ -36,13 +36,20 @@
 <script>   
         $(document).ready(function(){
                 $('#btn').click(function(){
-                   
-                })  
+                    prograssBar($('#idselect').val())
+                });  
                 
                 function prograssBar(treveal){
                     $('#innerId').animate({
-                        'width':treveal
-                    })
+                        'width':(500*treveal/100)
+                    },3000)
                 }
+
+                $({counter:1}).animate({counter:treveal},{
+                    duration:3000,
+                    step: function(){
+                        $('#innerId').text(Math.ceil(this.counter)+'%');
+                    }
+                })
         })
 </script>
