@@ -24,8 +24,8 @@
             <option value="90">90</option>
             <option value="100">100</option>
         </select><br><br>
-        <div id="outerid" style="background-color:#EEEE; height:30px; width:500px; padding:5px">
-            <div id="innerId" style="background-color:blue; height:19px; width:0px; padding:5px; color:white;text-align: center;">
+        <div id="outerid" style="background-color:#EEEE; height:40px; width:500px; padding:5px">
+            <div id="innerId" style="background-color:blue; height:29px; width:0px; padding:5px; color:white;text-align: center;">
             </div>
         </div>
         <button class="btn btn-primary mt-4" id="btn">Click Me</button>
@@ -42,14 +42,18 @@
                 function prograssBar(treveal){
                     $('#innerId').animate({
                         'width':(500*treveal/100)
-                    },3000)
-                }
+                    },3000);
 
-                $({counter:1}).animate({counter:treveal},{
+
+                    $({counter:1}).animate({counter:treveal},{
                     duration:3000,
                     step: function(){
                         $('#innerId').text(Math.ceil(this.counter)+'%');
                     }
                 })
+                }
+
+                
+                
         })
 </script>
