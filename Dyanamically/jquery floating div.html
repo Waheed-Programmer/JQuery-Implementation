@@ -21,7 +21,11 @@
                 As we scroll and when the current vertical position of the scroll bar becomes GREATER THAN the top position of the div element, then we want the div element to start floating. To do this set position style to fixed. A fixed position element is positioned relative to the browser window. So as you scroll down it will be floating in the browser window <br><br>
                 
                 If the current vertical position of the scroll bar becomes LESS THAN the top position of the div element, then we don't want the div element to float, so we set position style to relative. A relative position element is positioned relative to itself. So if you set position to relative and top to 0, it will continue to stay where it is without floating. <br><br>
-            
+                Example : In this example we are using position() and scrollTop() functions. The object returned by position() function has top and left properties, which can be used to know the current top and left positions (coordinates). We are using this function to find the top position of the div element that we want to keep floating as we scroll down. To get the current vertical position of the scroll bar, we are using scrollTop() function. <br><br>
+
+                As we scroll and when the current vertical position of the scroll bar becomes GREATER THAN the top position of the div element, then we want the div element to start floating. To do this set position style to fixed. A fixed position element is positioned relative to the browser window. So as you scroll down it will be floating in the browser window <br><br>
+                
+                If the current vertical position of the scroll bar becomes LESS THAN the top position of the div element, then we don't want the div element to float, so we set position style to relative. A relative position element is positioned relative to itself. So if you set position to relative and top to 0, it will continue to stay where it is without floating. <br><br>
             </td>
             <td style="width: 150px; vertical-align: top;">
                 side panel 
@@ -46,13 +50,12 @@
             var floatpos = pos.position();
             $(window).scroll(function(){
                 var scrolPos = $(window).scroll(top);
-                if(scrolPos >=floatpos){
+                if(scrolPos >=floatpos.top){
                     pos.css({
                         'position':'fixed',
-                        'top':'5px'
+                        'top':"5px"
                     });
-                }
-                
+                }                
                 else{
                     pos.css({
                         'position':'relative',
